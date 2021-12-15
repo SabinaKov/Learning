@@ -1,4 +1,5 @@
-﻿using Api.Models;
+﻿using BusinesLogic;
+using BusinesLogic.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
@@ -10,10 +11,8 @@ namespace Api.Controllers
         [HttpGet]
         public List<PersonModel> Get()
         {
-           List<PersonModel> people = new List<PersonModel>();
-                people.Add(new PersonModel {FirstName = "Sabina", LastName = "Kovarikova", Age = 25, IsAlive = true });
-                people.Add(new PersonModel {FirstName = "Miroslav", LastName = "Vaculka", Age = 30, IsAlive = true });
-            return people;
+            PeopleData peopleData = new PeopleData();
+            return peopleData.GetPeople();
         }
     }
 }
