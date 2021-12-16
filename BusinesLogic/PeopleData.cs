@@ -13,7 +13,7 @@ namespace BusinesLogic
 
         public PeopleData()
         {
-           _people = new List<PersonModel>()
+            _people = new List<PersonModel>()
             {
                 new PersonModel()
                 {
@@ -24,7 +24,43 @@ namespace BusinesLogic
                     FirstName = "Miroslav", LastName = "Vaculka", Age = 30, IsAlive = true
                 }
             };
+
+            DeepAndShallowCopyDifference();
+
         }
+
+        private void DeepAndShallowCopyDifference()
+        {
+            // Shallow Copy:
+            List<PersonModel> shallowCopyOfPeople;
+            shallowCopyOfPeople = _people;
+
+            // Deep Copy:
+            List<PersonModel> deepCopyOfPeople = new List<PersonModel>();
+            foreach (PersonModel person in _people)
+            {
+                deepCopyOfPeople.Add(person);
+            }
+
+            // Modification of shallow copy:
+            shallowCopyOfPeople.Add(
+                new PersonModel()
+                {
+                    FirstName = "David",
+                    LastName = "Macháček"
+                });
+
+            // Modification of deep copy:
+            deepCopyOfPeople.Add(
+                new PersonModel()
+                {
+                    FirstName = "Jakub",
+                    LastName = "Klement"
+                });
+
+
+        }
+
         public List<PersonModel> GetPeople()
         {
             PersonModel libor = new PersonModel()
