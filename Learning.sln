@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{36C93F6B-1812-4F40-965C-DECBC9C19BA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{36C93F6B-1812-4F40-965C-DECBC9C19BA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinesLogic", "BusinesLogic\BusinesLogic.csproj", "{918CE389-7F3E-4355-96B6-BA8BF67D6633}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinesLogic", "BusinesLogic\BusinesLogic.csproj", "{918CE389-7F3E-4355-96B6-BA8BF67D6633}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Console\Console.csproj", "{F735B861-857F-479C-B4E9-0AEECD50E716}"
+	ProjectSection(ProjectDependencies) = postProject
+		{918CE389-7F3E-4355-96B6-BA8BF67D6633} = {918CE389-7F3E-4355-96B6-BA8BF67D6633}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +26,10 @@ Global
 		{918CE389-7F3E-4355-96B6-BA8BF67D6633}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{918CE389-7F3E-4355-96B6-BA8BF67D6633}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{918CE389-7F3E-4355-96B6-BA8BF67D6633}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F735B861-857F-479C-B4E9-0AEECD50E716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F735B861-857F-479C-B4E9-0AEECD50E716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F735B861-857F-479C-B4E9-0AEECD50E716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F735B861-857F-479C-B4E9-0AEECD50E716}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
